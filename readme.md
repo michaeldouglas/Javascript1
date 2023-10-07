@@ -8,6 +8,10 @@ Caso você não possua no seu VSCode o Open in browser é recomendando pelo time
 
 Uma vez instalado você deverá clicar com o botão direito do mouse na pasta do projeto e então irá abrir o site.
 
+## Release atual
+
+O projeto encontra-se na relase: feature/aula1
+
 ### Suporte 
 
 Caso você precise de ajuda entre em contato com a squad turma 1 no e-mail: turma1@turma.com.br
