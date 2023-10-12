@@ -1,0 +1,35 @@
+// Tarefas ou exercicios de casa
+
+// Criar o respositorio
+  // Alguem vai criar entao criem em grupo porque essa pessoa ter que 
+  // compartilhar o repo com os outros
+    // Tech Lead quem sera o tech lead
+  // Team members 
+  // Projeto: https://github.com/michaeldouglas/Javascript1/projects?query=is%3Aopen
+  // Tasks criar as tasks do projeto
+  // Todas as terafas devem estar em done e todos os memobros da equipe precisam fazer algo
+  /// nem que seja um comentario pelo menos em um readme.md
+  // brenc separada sim seguindo a regra: feature para dev e release para fechado prod
+  // com comentarios tudo bonitinho
+
+// 1 - Projeto de calculadora sem interface apenas javascript com promt 
+    nao facam apenas calculos simples (tentem variar).
+// 2 - Um sistema de salao de belesa para corte de cabelo
+     - Tudo em javascript sem interface e com prompt
+       - Uma função que recebe o nome de quem deseja cortar o cabelo
+       - Uma função que diz olá funa
+       - Uma função que diz pode ser nesse horário?
+       - Caso sim, vamos iniciar?
+       - Uma função que diga terminamos
+       - Uma função que falar o valor
+       - Uma função que diz se recebeu o valor proposto pelo corte de cabelo
+    - Posso ser criativo e fazer mais coisas? Sim, converse com sua equipe
+    lembbre-se vc não está sozinho fazendo o trabalho veja se a equipe
+    tem o capacite para entregar o propost, se nao e apenas um projects
+// 3 - Um sistema que descreve o processo de acordar até dormir 
+   - deve possuir um fluxo escolhido pela equipe do projeto e o professor espera
+    que eu seja capaz de usar esse sistema e concorde que é um sistema que diz
+    como uma pessoa acorda e o que ela faz até dormir. Lembre-se que esse é o 
+    projeto mais complexo porque não tem definição e devar ser questionado ao 
+    PM as definições de entrega e isso irá influenciar diretamente no PRAZO e o 
+    PM e maluquete ele quer para amanha não importa como ele que para amanha
