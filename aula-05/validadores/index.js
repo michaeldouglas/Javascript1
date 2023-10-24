@@ -1,4 +1,11 @@
-const validarNomeDaPessoa = require('./validadores/validarNome');
-const validarIdade = require('./validadores/validarIdade');
+const Nomes = require('./Nomes');
+const Idades = require('./Idades');
+const Estados = require('./Estados');
+const Cidades = require('./Cidades');
 
-module.exports = { validarNomeDaPessoa, validarIdade }
+module.exports = {
+  Nomes,
+  Idades,
+  Estados,
+  Cidades
+};
