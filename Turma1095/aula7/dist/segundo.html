@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Banco Interativo</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+</head>
+
+<body class="bg-gray-100 p-8">
+  <h1 class="text-2xl font-bold mb-4">Banco Interativo</h1>
+
+  <div class="mb-4">
+    <label for="nomeCliente" class="block text-sm font-semibold text-gray-600">Nome do cliente:</label>
+    <input type="text" required id="nomeCliente" class="w-full border rounded-md p-2" />
+  </div>
+
+  <div class="mb-4">
+    <label for="saldoInicial" class="block text-sm font-semibold text-gray-600">Saldo Inicial:</label>
+    <input type="number" required id="saldoInicial" class="w-full border rounded-md p-2" />
+  </div>
+
+  <div class="mb-4">
+    <label for="depositoValor" class="block text-sm font-semibold text-gray-600">Valor a ser depositado:</label>
+    <input type="number" required id="depositoValor" class="w-full border rounded-md p-2" />
+  </div>
+
+  <div class="mb-4">
+    <label for="saqueValor" class="block text-sm font-semibold text-gray-600">Valor de saque: </label>
+    <input type="number" id="saqueValor" required class="w-full border rounded-md p-2" />
+  </div>
+
+  <button id="enviarBtn"
+    class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 focus:putline-none focus:ring focus:border-blue-300">
+    Enviar
+  </button>
+
+  <div id="resultado" class="mt-4"></div>
+
+  <script type="module">
+    import { Banco } from "./Banco.js";
+    const banco = new Banco();
+
+    function obterInformacoesDoUsuario() {
+      const nomeCliente = document.getElementById('nomeCliente').value;
+      const saldoInicial = parseFloat(document.getElementById('saldoInicial').value);
+      const depositoValor = parseFloat(document.getElementById('depositoValor').value);
+      const saqueValor = parseFloat(document.getElementById('saqueValor').value);
+
+      if (nomeCliente && !isNaN(saldoInicial)) {
+        banco.cadastrarCliente(nomeCliente, saldoInicial);
+
+        if (!isNaN(depositoValor)) {
+          banco.depositar(1, depositoValor);
+
+          if (!isNaN(saqueValor)) {
+            banco.sacar(1, saqueValor);
+
+            document.getElementById('resultado').innerHTML = `Saldo final do cliente ${nomeCliente}: ${banco.consultarSaldo(1)}`;
+          } else {
+            alert('Valor de saque invalido!');
+          }
+        } else {
+          alert('Valor do deposito invalido!');
+        }
+      } else {
+        alert('Dados invalidos!');
+      }
+    }
+
+    document.getElementById('enviarBtn').addEventListener('click', obterInformacoesDoUsuario);
+  </script>
+
+</body>
+
+</html>
