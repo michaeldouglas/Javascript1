@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exemplo4</title>
+  </head>
+  <body>
+    <!-- HTML -->
+    <p>Dados vindos do AJAX:</p>
+    <div id="resultado"></div>
+
+    <!-- JavaScript -->
+    <script>
+      // Fazendo uma requisição AJAX usando XMLHttpRequest
+      var xhr = new XMLHttpRequest();
+      xhr.onreadystatechange = function () {
+        if (xhr.readyState == 4 && xhr.status == 200) {
+          document.getElementById("resultado").innerHTML = xhr.responseText;
+        }
+      };
+      xhr.open(
+        "GET",
+        "http://127.0.0.1:5500/Turma1132/aula3/ManipulacaoEstilos_3.html",
+        true
+      );
+      xhr.send();
+    </script>
+  </body>
+</html>

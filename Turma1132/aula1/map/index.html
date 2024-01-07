@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Consultar CEP</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+</head>
+
+<body>
+  <div class="p-6">
+    <!-- ACAO DE BUSCAR -->
+    <h1 class="text-3xl font-bold mb-4">Consulta de CEP</h1>
+    <div class="flex mb-4">
+      <input type="text" id="cepInput" class="w-1/2 px-3 py-2 border rounded-lg mr-2" />
+      <button id="buscarCEP" class="bg-blue-500 text-white px-4 py-2 rounded-lg">Buscar CEP</button>
+    </div>
+    <!-- RESULTADO -->
+    <div class="flex mb-4">
+      <div id="resultado" class="w-1/2">
+        <table class="table-auto">
+          <thead>
+            <tr>
+              <th class="px-4 py-2">CEP</th>
+              <th class="px-4 py-2">Logradouro</th>
+              <th class="px-4 py-2">Bairro</th>
+              <th class="px-4 py-2">Cidade</th>
+              <th class="px-4 py-2">Estado</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Mapa do google maps e também mostrar o endereço buscado -->
+          </tbody>
+        </table>
+      </div>
+      <!-- AQUI VAI O MAPA -->
+      <div id="mapa" class="w-1/2">
+        <!-- AQUI VAI SER PREENCHIDO PELO JS -->
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>

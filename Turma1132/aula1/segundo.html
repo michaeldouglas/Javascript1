@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    async function* Chamada() {
+      for (let i = 0; i < 5; i++) {
+        const startTime = Date.now(); // Registra o tempo inicial para cada solicitação
+        yield { index: i, startTime };
+
+        const response = await fetch('https://viacep.com.br/ws/01001000/json/');
+        const data = await response.json();
+        const elapsed = Date.now() - startTime;
+
+        yield { index: i, data, elapsed };
+      }
+    }
+
+    (async () => {
+      for await (const item of Chamada()) {
+        if (item.startTime) {
+          console.log(`Iniciando solicitação ${item.index}`);
+        } else {
+          console.log(`Solicitação ${item.index} concluída em ${item.elapsed} ms. Dados: ${JSON.stringify(item.data)}`);
+        }
+      }
+    })();
+  </script>
+</body>
+
+</html>

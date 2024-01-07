@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Requisitar CEP</title>
+  <style>
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    table,
+    th,
+    td {
+      border: 1px solid black;
+    }
+
+    th,
+    td {
+      padding: 8px;
+      text-align: left;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+  </style>
+
+  <script>
+    async function* Chamada() {
+      yield await fetch('https://viacep.com.br/ws/01001000/json/');
+      yield await fetch('https://viacep.com.br/ws/01310930/json/');
+      yield await fetch('https://viacep.com.br/ws/06755260/json/');
+    }
+
+    (async () => {
+      for await (const response of Chamada()) {
+        const data = await response.json();
+
+        const table = document.querySelector('table');
+        const newRow = table.insertRow(-1);
+
+        for (const key in data) {
+          if (data.hasOwnProperty(key)) {
+            const newCell = newRow.insertCell(-1);
+            newCell.textContent = data[key];
+          }
+        }
+      }
+    })();
+  </script>
+</head>
+
+<body>
+  <table>
+    <tr>
+      <th>CEP</th>
+      <th>Logradouro</th>
+      <th>Complemento</th>
+      <th>Bairro</th>
+      <th>Localidade</th>
+      <th>UF</th>
+      <th>IBGE</th>
+      <th>GIA</th>
+      <th>DDD</th>
+      <th>SIAFI</th>
+    </tr>
+  </table>
+</body>
+
+</html>
