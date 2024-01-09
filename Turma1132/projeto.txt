@@ -1,0 +1,34 @@
+// Trabalho estrutura do projeto
+
+// Criar o repositório
+// Algum membro da Squad vai criar, então criem em grupo porque o responsável terá que
+// compartilhar o repo com os outros
+// Team members
+// Tasks - criar as tasks do projeto
+// Todas as tarefas devem estar em "done" e todos os membros da equipe precisam fazer algo,
+// mesmo que seja apenas um comentário em um readme.md
+// Branch separada sim, seguindo a regra: feature para dev e release para prod,
+// com comentários.
+
+// Projeto 1 - Projeto de calculadora sem interface, apenas JavaScript com prompt.
+Não façam apenas cálculos simples (tentem variar).
+
+// Projeto 2 - Um sistema de salão de beleza para corte de cabelo:
+- Tudo em JavaScript, sem interface e com prompt.
+- Uma função que recebe o nome de quem deseja cortar o cabelo.
+- Uma função que diz olá, fulano.
+- Uma função que diz "Pode ser nesse horário?"
+- Caso sim, vamos iniciar?
+- Uma função que diga "terminamos."
+- Uma função que fale o valor.
+- Uma função que diz se recebeu o valor proposto pelo corte de cabelo.
+- Posso ser criativo e fazer mais coisas? Sim, converse com sua equipe.
+Lembre-se, você não está sozinho fazendo o trabalho. Veja se a equipe
+tem a capacidade para entregar o proposto. Se não, solicite ajuda.
+
+// Projeto 3 - Um sistema que descreve o processo de acordar até dormir.
+Deve possuir um fluxo escolhido pela equipe do projeto. O professor espera
+que eu seja capaz de usar esse sistema. Será um sistema que diz
+como uma pessoa acorda, ou seja, o processo de acordar até até dormir. Lembre-se de que esse é o
+projeto mais complexo porque não tem definição e deve ser questionado ao
+professor as definições de entrega.
