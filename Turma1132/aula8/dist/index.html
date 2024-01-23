@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Banco Interativo 1132</title>
+  </head>
+  <body>
+    <h1>Banco interativo</h1>
+
+    <script type="module">
+      import { Banco } from "./Banco.js";
+      const banco = new Banco();
+
+      function obterInformacoesDoCliente() {
+        const nomeCliente = prompt("Digite o nome do cliente: ");
+        const saldoInicial = parseFloat(
+          prompt("Digite o saldo inicial do cliente: ")
+        );
+        const depositoValor = parseFloat(prompt("Digite o a ser depositado: "));
+        const saqueValor = parseFloat(prompt("Digite o valor a ser sacado: "));
+
+        if (nomeCliente && !isNaN(saldoInicial)) {
+          banco.cadastrarCliente(nomeCliente, saldoInicial);
+
+          if (!isNaN(depositoValor)) {
+            banco.depositar(1, depositoValor);
+
+            // @TODO: E se eu nao quiser depositar e apenas sacar o valor
+            if (!isNaN(saqueValor)) {
+              banco.sacar(1, saqueValor);
+              banco.consultarSaldo(1);
+            } else {
+              alert("Valor do saque invalido!");
+            }
+          } else {
+            alert("Valor de deposito invalido!");
+          }
+        } else {
+          alert("Por favor foneca infomacoes validas sobre o cliente!");
+        }
+      }
+
+      window.onload = obterInformacoesDoCliente;
+    </script>
+  </body>
+</html>

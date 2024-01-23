@@ -10,11 +10,11 @@
 // Branch separada sim, seguindo a regra: feature para dev e release para prod,
 // com comentários.
 
-// Projeto 1 - Projeto de calculadora sem interface, apenas JavaScript com prompt.
+// Projeto 1 - Projeto de calculadora sem interface, JavaScript e se possível com interface e utilizando prompt.
 Não façam apenas cálculos simples (tentem variar).
 
 // Projeto 2 - Um sistema de salão de beleza para corte de cabelo:
-- Tudo em JavaScript, sem interface e com prompt.
+- Em JavaScript com interface se possível, caso não tenha interface em html possuir o prompt.
 - Uma função que recebe o nome de quem deseja cortar o cabelo.
 - Uma função que diz olá, fulano.
 - Uma função que diz "Pode ser nesse horário?"
