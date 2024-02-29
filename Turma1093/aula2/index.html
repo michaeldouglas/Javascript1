@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cadastro de pessoas</title>
+    <link rel="stylesheet" href="src/css/app.css" />
+  </head>
+  <body>
+    <main>
+      <section>
+        <h1>Cadastro de pessoas</h1>
+        <form
+          id="cadastro"
+          name="cadastro"
+          onsubmit="return validarFormulario(this)"
+        >
+          <fieldset>
+            <p>
+              <label for="nome">Nome:</label>
+              <input
+                type="text"
+                name="nome"
+                id="nome"
+                placeholder="Digite seu nome"
+                required
+              />
+              <span class="separator"></span>
+            </p>
+          </fieldset>
+          <fieldset>
+            <p>
+              <label for="email">Email:</label>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="Digite seu email"
+                required
+              />
+            </p>
+          </fieldset>
+          <fieldset>
+            <p>
+              <label for="CPF">CPF:</label>
+              <input
+                type="text"
+                name="CPF"
+                id="CPF"
+                placeholder="Digite seu CPF"
+                required
+              />
+            </p>
+          </fieldset>
+          <fieldset>
+            <p>
+              <input type="submit" id="submit" value="Enviar" />
+            </p>
+          </fieldset>
+        </form>
+      </section>
+    </main>
+
+    <script src="dist/app.bundle.js"></script>
+  </body>
+</html>
