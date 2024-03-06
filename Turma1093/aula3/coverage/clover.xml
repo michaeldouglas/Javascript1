@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1709341330482" clover="3.2.0">
-  <project timestamp="1709341330482" name="All files">
+<coverage generated="1709599110974" clover="3.2.0">
+  <project timestamp="1709599110974" name="All files">
     <metrics statements="6" coveredstatements="6" conditionals="4" coveredconditionals="4" methods="2" coveredmethods="2" elements="12" coveredelements="12" complexity="0" loc="6" ncloc="6" packages="1" files="1" classes="1"/>
     <file name="calculadora.js" path="C:\Users\mdbaa\development\projects\FrontEnd\Javascript1\Turma1093\aula3\calculadora.js">
       <metrics statements="6" coveredstatements="6" conditionals="4" coveredconditionals="4" methods="2" coveredmethods="2"/>
-      <line num="2" count="6" type="cond" truecount="4" falsecount="0"/>
+      <line num="2" count="1000007" type="cond" truecount="4" falsecount="0"/>
       <line num="3" count="1" type="stmt"/>
-      <line num="5" count="5" type="stmt"/>
-      <line num="10" count="3" type="stmt"/>
+      <line num="5" count="1000006" type="stmt"/>
+      <line num="10" count="6" type="stmt"/>
       <line num="13" count="1" type="stmt"/>
       <line num="14" count="1" type="stmt"/>
     </file>
