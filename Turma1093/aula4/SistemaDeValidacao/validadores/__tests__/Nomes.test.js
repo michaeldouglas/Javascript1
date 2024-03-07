@@ -10,5 +10,13 @@ describe("[Suite_Testes_1093_Projeto][Nomes] Suíte de testes módulo (nome)", (
     test("Deve retornar false para um nome vazio por exemplo: '' ", () => {
       expect(Nomes("")).toBe(false);
     });
+
+    test("Deve retornar false para um nome com apenas espaços em branco por exemplo: '    ' ", () => {
+      expect(Nomes("   ")).toBe(false);
+    });
+
+    test("Deve retornar false para um nome com caracteres especiais por exemplo: teste@teste.com.br", () => {
+      expect(Nomes("teste@teste.com.br")).toBe(false);
+    });
   });
 });
