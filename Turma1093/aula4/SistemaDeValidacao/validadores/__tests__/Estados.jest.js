@@ -47,8 +47,13 @@ describe("[Suite_Testes_1093_Projeto][Estados] Suíte de testes módulo (estados
     expect(estado.valido).toBe(true);
   });
 
-  test("Deve retornar false para um estado com apenas um espaço '' ", () => {
+  test("Deve retornar false para um estado com apenas um espaço ' ' ", () => {
     const estado = new Estados(" ");
+    expect(estado.valido).toBe(false);
+  });
+
+  test("Deve retornar false para um objeto exemplo {estado: 'São Paulo'}", () => {
+    const estado = new Estados({ estado: "São Paulo" });
     expect(estado.valido).toBe(false);
   });
 });
