@@ -7,22 +7,22 @@ const ValidarPessoas = (pessoa) => {
     {
       valido: Nomes(pessoa.nome),
       message: "Nome Invalido",
-      erroCode: 300,
+      errorCode: 300,
     },
     {
       valido: Idades(pessoa.idade),
       message: "Idade Invalida",
-      erroCode: 301,
+      errorCode: 301,
     },
     {
       valido: new Estados(pessoa.estado).valido, // E se nao fosse objeto?
       message: "Estado Invalido",
-      erroCode: 302,
+      errorCode: 302,
     },
     {
       valido: Cidades(pessoa.cidade),
       message: "Cidade Invalida",
-      erroCode: 303,
+      errorCode: 303,
     },
   ];
 };
